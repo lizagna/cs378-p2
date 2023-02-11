@@ -19,20 +19,20 @@
           <img class="logo" src="os-campus-cafe-logo-2x.png" alt="campus cafe logo">
       </header>
       <h1 class="header">Delicious, From-Scratch Recipes Close at Hand</h1>
-      <h1 class="row">The fresh choice of UT!</h1>
+      <h1 class="sub-header">The fresh choice of UT!</h1>
   
       <table class="menu">
-        <tr>
+        <tr id="mac">
           <td class="item-icon">
             <img class="food-icon" src="mac.jpeg" alt="mac n cheese yerm yerm">
           </td>
           <td class="item-detail">
             <table class="items">
               <tr>
-                <td>
-                  <span class="food">mac & cheese</span>
+                <td class="food-name-container">
+                  <span class="food" id="mac-name">mac & cheese</span>
                 </td>
-                <td class="price">
+                <td class="price-container">
                   <span id="price-mac">$5</span>
                 </td>
               </tr>
@@ -41,62 +41,77 @@
                   <table class="item-btns">
                     <tr>
                       <td>
-                        <a class="menu-btn" id="remove-mac-btn" onclick="onClickRemove('mac-quantity')">
+                        <a class="menu-btn" id="remove-mac-btn" onclick="onClickRemove(['mac', 'mac-quantity'])">
                           <img class="add-remove-btn" src="remove.svg">
                         </a>
                       </td>
-                      <td>
+                      <td class="food-quantity-container">
                         <span class="food-quantity" id="mac-quantity">0</span>
                       </td>
                       <td>
-                        <a class="menu-btn" id="add-mac-btn" onclick="onClickAdd('mac-quantity')">
+                        <a class="menu-btn" id="add-mac-btn" onclick="onClickAdd(['mac', 'mac-quantity'])">
                           <img class="add-remove-btn" src="add.svg">
                         </a>
                       </td>
                     </tr>
                   </table>
-                  
                 </td>
               </tr>
             </table>
           </td>
         </tr>
 
-        <tr>
+        <tr id="pasta">
           <td class="item-icon">
             <img class="food-icon" src="pasta.jpeg" alt="oui oui pasta!!">
           </td>
           <td class="item-detail">
             <table class="items">
               <tr>
-                <td>
-                  <span class="food">pasta</span>
+                <td class="food-name-container">
+                  <span class="food" id="pasta-name">pasta</span>
                 </td>
-                <td class="price">
-                  <span>$8</span>
+                <td class="price-container">
+                  <span id="pasta-price">$8</span>
                 </td>
               </tr>
               <tr>
-                <td colspan="2">
-                  <button>order</button>
+                <td colspan="2" class="btn-container">
+                  <table class="item-btns">
+                    <tr>
+                      <td>
+                        <a class="menu-btn" id="remove-pasta-btn" onclick="onClickRemove(['pasta', 'pasta-quantity'])">
+                          <img class="add-remove-btn" src="remove.svg">
+                        </a>
+                      </td>
+                      <td class="food-quantity-container">
+                        <span class="food-quantity" id="pasta-quantity">0</span>
+                      </td>
+                      <td>
+                        <a class="menu-btn" id="add-pasta-btn" onclick="onClickAdd(['pasta', 'pasta-quantity'])">
+                          <img class="add-remove-btn" src="add.svg">
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
 
-        <tr>
+        <tr id="taco">
           <td class="item-icon">
             <img class="food-icon" src="tacos.jpeg" alt="taco taco">
           </td>
           <td class="item-detail">
             <table class="items">
               <tr>
-                <td>
-                  <span class="food">tacos</span>
+                <td class="food-name-container">
+                  <span class="food" id="taco-name">tacos</span>
                 </td>
-                <td class="price">
-                  <span>$8</span>
+                <td class="price-container">
+                  <span id="taco-price">$8</span>
                 </td>
               </tr>
               <tr>
@@ -108,18 +123,18 @@
           </td>
         </tr>
 
-        <tr>
+        <tr id="enchilada">
           <td class="item-icon">
             <img class="food-icon" src="enchilada.jpeg" alt="enchilada hehe">
           </td>
           <td class="item-detail">
             <table class="items">
               <tr>
-                <td>
-                  <span class="food">enchilada</span>
+                <td class="food-name-container">
+                  <span class="food" id="enchilada-name">enchilada</span>
                 </td>
-                <td class="price">
-                  <span>$10</span>
+                <td class="price-container">
+                  <span id="enchilada-price">$10</span>
                 </td>
               </tr>
               <tr>
@@ -130,9 +145,25 @@
             </table>
           </td>
         </tr>
-
-
       </table>
+
+      <div>
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>
+              <span class="subtotal" id="order-subtotal">$0</span>
+            </td>
+            <td>
+              <button onclick="submitOrder()">Order</button>
+            </td>
+            <td>
+              <button onclick="clearAll()">Clear all</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    
     </div>
     <script src="script.js"></script>
   </body>
