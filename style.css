@@ -1,129 +1,89 @@
 body {
-    padding-top: 10px;
-    text-align: center;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .container {
-  padding-top: 10px;
-  width: 100% !important;
-  text-align: center !important; 
+padding-top: 10px;
+width: 100% !important;
+text-align: center !important; 
 }
 
 .logo {
-  padding-bottom: 25px;
-  text-align: center;
-  width: 60%;
+padding-bottom: 25px;
+text-align: center;
+width: 60%;
 }
 
 h1 {
-  font-weight: normal;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+font-weight: normal;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
 }
 
 .header {
-  color: orange;
+color: orange;
 }
 
 .row {
-  font-size: 20px;
-  font-style: italic;
+font-size: 20px;
+font-style: italic;
 }
 
 img {
-  width: 90px;
+width: 90px;
 }
 
 .menu {
-  width: 100%;
-  table-layout: fixed;
+width: 100%;
+table-layout: fixed;
 }
 
-.menu td {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.menu .item-icon {
+  width: 61px;
+  height: 75px;
+  text-align: center;
 }
 
-.item-icon {
-    width: 80px;
-    text-align: center;
+.menu .item-detail{
+  text-align: left;
+  padding-left: 20px;
 }
 
-.item-details {
-    text-align: left;
-    padding-left: 20px;
-}
-
-.menu td button {
-  padding-top: 0px;
-}
 
 .food-icon {
-  width: 60px;
-  height: 75px;
+width: 60px;
+height: 60px;
 }
 
 .items {
-  width: 100%;
-  table-layout: fixed;
-  height: 100%;
+width: calc(100% - 0px);
+table-layout: fixed;
+height: 100%;
 }
 
+
 .items .price {
-  text-align: right;
-  padding-top: 10px;
-  width: 40px
+text-align: right;
+padding-top: 10px;
+width: 40px;
 }
 
 table.item-btns {
-    float: right;
-}
-
-.items td span {
-  padding-top: 0px;
-}
-
-/* .items td:first-child{
-  text-align: left;
-  padding-left: 0px;
-  padding-top: 10px;
-}
-
-.items td:nth-child(2) {
-  text-align: right;
-  padding-right: 10px;
-  padding-top: 10px;
-  width: 20px
-} */
-
-/* .btn-container-row {
-  width: 80px;
-  text-align: center;
-} */
-
-.btn-container {
   float: right;
-  padding-right: 0px;
-  text-align: right;
-  margin-right: 0px;
 }
 
-.btn-container table td{
-  width: 10px;
-  height: 15px;
-}
 
-.menu-btn {
-  padding-bottom: 2px;
+.item-btns td {
+  width: 16px;
+  text-align: center;
+  padding:0px;
 }
-
-.food-quantity {
-  font-size: 15px;
+.item-btns td:nth-child(2) {
+  width: 40px;
 }
-
 .add-remove-btn {
-  height: 12px;
-  width: 12px;
+height: 16px;
+width: 16px;
 }
-
 
