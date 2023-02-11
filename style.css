@@ -90,9 +90,33 @@ img {
   width: 20px
 }
 
-.items td button {
-  border-radius: 30px;
-  width: 70px;
-  background-color: #bed5f8;
+/* .btn-container-row {
+  width: 100% !important;
+} */
+
+.btn-container {
+  float: right;
+  padding-right: 0px;
+  text-align: right;
+  margin-right: 0px;
 }
+
+.btn-container table td{
+  width: 10px;
+  height: 15px;
+}
+
+.menu-btn {
+  padding-bottom: 2px;
+}
+
+.food-quantity {
+  font-size: 15px;
+}
+
+.add-remove-btn {
+  height: 12px;
+  width: 12px;
+}
+
 
