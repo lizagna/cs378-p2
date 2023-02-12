@@ -63,27 +63,28 @@ function onClickAdd(input) {
     calculateSubtotal(data[foodName]);
 }
 
+/**
+ * Computes the order total every t
+ */
 function calculateSubtotal() {
     subtotal = 0;
-    // document.getElementsById("order-subtotal").innerHTML = "$" + subtotal;
-    
     let foodNames = ["mac", "pasta", "tacos", "enchilada"];
     
     foodNames.forEach(function(foodName) {
-        // let quantityId = foodName + "-quantity";
         var foodItem = data[foodName];
         let value = foodItem.price * foodItem.orderQuantity;
-        // console.log(foodItem.name + ": " + value);
         subtotal += value;
-        
-        // document.getElementById(quantityId).innerHTML = "0";
-        // data[foodName].orderQuantity = 0;
     });
-    console.log(subtotal);
+
     document.getElementById("order-subtotal").innerHTML = "$" + subtotal;
 
 }
 
+/**
+ * Not used but another option to calculate the subtotal
+ * @param {*} foodItem the JSON object
+ * @param {*} operationMethod adding or subtracting from subtotal
+ */
 function updateSubtotal(foodItem, operationMethod) {
     let value = foodItem.orderQuantity * foodItem.price;
     
@@ -96,17 +97,20 @@ function updateSubtotal(foodItem, operationMethod) {
     document.getElementById("order-subtotal").innerHTML = "$" + subtotal;
 }
 
+/**
+ * Resets all the food item quantity values back to 0 and 
+ * the subtotal back to 0
+ */
 function clearAll() {
     subtotal = 0;
-    
     let foodNames = ["mac", "pasta", "tacos", "enchilada"];
-    console.log(foodNames);
+
+    /**
+     * Goes through each food item and zeros out their quantities
+     */
     foodNames.forEach(function(foodName) {
-        // console.log(foodName);
         let quantityId = foodName + "-quantity";
         
-        // console.log(quantityId);
-        // console.log(document.getElementById(quantityId));
         data[foodName].orderQuantity = 0;
 
         let element = document.getElementById(quantityId);
@@ -116,7 +120,7 @@ function clearAll() {
 
     calculateSubtotal();
 
-    // document.getElementById("order-subtotal").innerHTML = "$0";
+    // document.getElementById("order-subtotal").innerHTML = "$" + subtotal;
   
 }
 

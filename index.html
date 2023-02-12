@@ -100,7 +100,7 @@
           </td>
         </tr>
 
-        <tr id="taco">
+        <tr id="tacos">
           <td class="item-icon">
             <img class="food-icon" src="tacos.jpeg" alt="taco taco">
           </td>
@@ -115,8 +115,24 @@
                 </td>
               </tr>
               <tr>
-                <td colspan="2">
-                  <button>order</button>
+                <td colspan="2" class="btn-container">
+                  <table class="item-btns">
+                    <tr>
+                      <td>
+                        <a class="menu-btn" id="remove-tacos-btn" onclick="onClickRemove(['tacos', 'tacos-quantity'])">
+                          <img class="add-remove-btn" src="remove.svg">
+                        </a>
+                      </td>
+                      <td class="food-quantity-container">
+                        <span class="tacos-quantity" id="tacos-quantity">0</span>
+                      </td>
+                      <td>
+                        <a class="menu-btn" id="add-tacos-btn" onclick="onClickAdd(['tacos', 'tacos-quantity'])">
+                          <img class="add-remove-btn" src="add.svg">
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
@@ -138,8 +154,24 @@
                 </td>
               </tr>
               <tr>
-                <td colspan="2">
-                  <button>order</button>
+                <td colspan="2" class="btn-container">
+                  <table class="item-btns">
+                    <tr>
+                      <td>
+                        <a class="menu-btn" id="remove-enchilada-btn" onclick="onClickRemove(['enchilada', 'enchilada-quantity'])">
+                          <img class="add-remove-btn" src="remove.svg">
+                        </a>
+                      </td>
+                      <td class="food-quantity-container">
+                        <span class="enchilada-quantity" id="enchilada-quantity">0</span>
+                      </td>
+                      <td>
+                        <a class="menu-btn" id="add-enchilada-btn" onclick="onClickAdd(['enchilada', 'enchilada-quantity'])">
+                          <img class="add-remove-btn" src="add.svg">
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
