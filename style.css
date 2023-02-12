@@ -4,119 +4,134 @@ body {
 }
 
 .container {
-  padding-top: 10px;
-  width: 100% !important;
-  text-align: center !important; 
+    padding-top: 10px;
+    width: 100% !important;
+    text-align: center !important;
 }
 
 .logo {
-  padding-bottom: 25px;
-  text-align: center;
-  width: 60%;
+    padding-bottom: 25px;
+    text-align: center;
+    width: 60%;
 }
 
 h1 {
-  font-weight: normal;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 .header {
-  color: orange;
+    color: orange;
 }
 
-.row {
-  font-size: 20px;
-  font-style: italic;
+.sub-header {
+    font-size: 20px;
+    font-style: italic;
 }
 
 img {
-  width: 90px;
+    width: 90px;
 }
 
 .menu {
-  width: 100%;
-  table-layout: fixed;
+    width: 100%;
+    table-layout: fixed;
 }
 
-.menu td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.menu td:first-child {
-    width: 80px;
+.menu .item-icon {
+    width: 61px;
+    height: 75px;
     text-align: center;
 }
 
-.menu td:last-child {
+.menu .item-detail {
     text-align: left;
     padding-left: 20px;
 }
 
-.menu td button {
-  padding-top: 0px;
-}
 
 .food-icon {
-  width: 60px;
-  height: 75px;
+    width: 60px;
+    height: 60px;
 }
 
 .items {
-  width: 100%;
-  table-layout: fixed;
-  height: 100%;
+    width: calc(100% - 0px);
+    table-layout: fixed;
+    height: 100%;
 }
 
-.items td {
-  padding-bottom: 15px;
+.items .food-name-container {
+    padding-bottom: 10px;
 }
 
-.items td span {
-  padding-top: 0px;
+.items .price-container {
+    text-align: right;
+    padding-bottom: 10px;
+    width: 40px;
 }
 
-.items td:first-child{
-  text-align: left;
-  padding-left: 0px;
-  padding-top: 10px;
+table.item-btns {
+    float: right;
 }
 
-.items td:nth-child(2) {
-  text-align: right;
-  padding-right: 10px;
-  padding-top: 10px;
-  width: 20px
+.item-btns td {
+    width: 16px;
+    text-align: center;
+    padding: 0px;
 }
 
-/* .btn-container-row {
-  width: 100% !important;
-} */
-
-.btn-container {
-  float: right;
-  padding-right: 0px;
-  text-align: right;
-  margin-right: 0px;
-}
-
-.btn-container table td{
-  width: 10px;
-  height: 15px;
-}
-
-.menu-btn {
-  padding-bottom: 2px;
-}
-
-.food-quantity {
-  font-size: 15px;
+/* food quantity */
+.item-btns td:nth-child(2) {
+    width: 20px;
+    padding-top: 2px;
 }
 
 .add-remove-btn {
-  height: 12px;
-  width: 12px;
+    height: 16px;
+    width: 16px;
 }
 
 
+button {
+    border-radius: 10px;
+    border: 1px solid;
+    margin-left: 25px;
+    background-color: #b3d1ff;
+}
+
+/*order Confirmation modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.order-comfirmation-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px 10px 30px 10px;
+    border: 1px solid #000;
+    width: 70%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,.2);
+}
+
+/* The Close Button  */
+button.closeOrder {
+    float: right;
+    width: 50px;
+    padding: 0px;
+}
